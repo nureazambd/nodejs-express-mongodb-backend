@@ -1,0 +1,9 @@
+### Create a new item
+POST http://localhost:5000/api/items
+Content-Type: application/json
+
+{
+  "name": "New Item 2",
+  "description": "This is a new item 2",
+  "price": 200
+}
