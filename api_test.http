@@ -1,9 +1,42 @@
+@baseUrl = http://localhost:5000/api
+@itemId = 669166786a9af4984f931905
+
+### Get all items
+GET {{baseUrl}}/items
+Content-Type: application/json
+
+###
+
+### Get a single item by ID
+GET http://localhost:5000/api/items/{{itemId}}
+Content-Type: application/json
+
 ### Create a new item
 POST http://localhost:5000/api/items
 Content-Type: application/json
 
 {
-  "name": "New Item 2",
-  "description": "This is a new item 2",
+  "name": "New Item",
+  "description": "This is a new item",
   "price": 200
 }
+
+### Update an existing item
+PUT http://localhost:5000/api/items/66913d606a9af4984f931902
+Content-Type: application/json
+
+{
+  "name": "Updated Item",
+  "description": "This is an updated item",
+  "price": 150
+}
+
+
+### Delete an item
+DELETE http://localhost:5000/api/items/66913d606a9af4984f931902
+Content-Type: application/json
+
+
+### Test Search API
+GET http://localhost:5000/api/items/search/2
+Content-Type: application/json
